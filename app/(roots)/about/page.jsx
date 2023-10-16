@@ -89,7 +89,7 @@ export default function About() {
               <AccordionItem value="item-1">
                 <AccordionTrigger>技能 Skills</AccordionTrigger>
                 <AccordionContent>
-                  1. 前端網頁設計：JavaScript+TypeScript+React+Next.js、HTML5、CSS3
+                  1. 前端網頁設計：<br/>JavaScript+TypeScript+React+Next.js+jQuery、<br/>HTML5、CSS3
                   <div className="flex gap-2 py-1.5">
                     <Image 
                       src="/images/about/JS.png"
@@ -115,6 +115,13 @@ export default function About() {
                     <Image 
                       src="/images/about/NEXT.svg"
                       alt="Next.js Logo"
+                      width={20}
+                      height={20}
+                      className="aspect-square"
+                    />
+                    <Image 
+                      src="/images/about/jQuery.png"
+                      alt="jQuery Logo"
                       width={20}
                       height={20}
                       className="aspect-square"
