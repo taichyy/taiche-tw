@@ -51,7 +51,7 @@ export default function About() {
                 className="object-cover hover:opacity-80 duration-300"
               />
             </div>
-            <h2 className="text-3xl my-10 font-medium leading-relaxed tracking-wider">
+            <h2 className="text-2xl md:text-3xl my-10 font-medium leading-relaxed tracking-wider">
               <TypeAnimation
                 sequence={[
                   'MAKE IT REALITY!',
