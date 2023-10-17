@@ -37,17 +37,22 @@ export default function Hamburger({onClick}) {
                         <h4 style={{fontWeight : "800"}}>回首頁</h4>
                     </li>
                 </Link>
-                <Link href="/Portfolio">
+                <Link href="/about">
+                    <li>
+                        <h4>關於我</h4>
+                    </li>
+                </Link>
+                <Link href="/portfolio">
                     <li>
                         <h4>作品集</h4>
                     </li>
                 </Link>
-                <Link href="/Resume">
+                <Link href="/resume">
                     <li>
                         <h4>個人履歷</h4>
                     </li>
                 </Link>
-                <Link href="/Contact">
+                <Link href="/contact">
                     <li>
                         <h4>聯絡方式</h4>
                     </li>
