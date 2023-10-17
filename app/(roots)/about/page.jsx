@@ -21,15 +21,14 @@ export default function About() {
   const handleClick = () => {
     showedText ? setShowedText(false) : setShowedText(true)
   }
+  
 
   return (
     <div className="min-h-screen">
       <div className="flex flex-col min-h-screen">
         <nav>
           <HomeBtn />
-          <span onClick={()=>handleClick()}>
-            <Hamburger onClick={()=>handleClick()}/>
-          </span>
+          <Hamburger onClick={handleClick}/>
         </nav>
         <div className="grid grid-cols-1 px-10 pt-10 pb-8 flex-grow gap-10 md:grid-cols-3">
           <aside className="relative h-full">

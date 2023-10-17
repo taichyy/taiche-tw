@@ -7,11 +7,11 @@ import Link from 'next/link';
 // Styles
 import styles from './hamburger.module.css';
 
-export default function Hamburger() {
+export default function Hamburger({onClick}) {
 
 
     return (
-        <nav role="navigation" className={styles.nav}>
+        <nav role="navigation" onClick={onClick} className={styles.nav}>
             <div className={styles.menuToggle}>
                 {/* <!--
                 A fake / hidden checkbox is used as click reciever,
