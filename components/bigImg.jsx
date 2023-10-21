@@ -2,10 +2,10 @@ import Link from 'next/link';
 import Image from 'next/image';
 import HomeBtn from '@/components/home-btn';
 
-export default function BigImg({data}) {
+export default function BigImg({data, btn, height}) {
 
     return (
-        <div className="h-[80vh] w-screen relative">
+        <div className={`w-screen relative ${height=="full" ? "h-screen" : "h-[80vh]" }`}>
             <Image 
                 src={data.Bgc}
                 alt={data.BgAlt}
@@ -15,17 +15,17 @@ export default function BigImg({data}) {
             />
             {data ? (
                 <div className="
-                    absolute top-1/2 left-1/4
+                    absolute top-1/3 md:top-1/2 left-[12.5%] md:left-1/4
                     flex items-center
-                    px-16 py-16
-                    w-1/2 min-h-fit
+                    px-4 py-4 md:px-16 md:py-16
+                    w-3/4 md:w-1/2 min-h-fit
                     font-extrabold duration-300
                 ">
                     {/* bgc */}
-                    <div className='bg-white opacity-50 w-full h-full absolute top-0 left-0 hover:opacity-70 duration-200' />
+                    <div className='bg-white opacity-30 w-full h-full absolute top-0 left-0 hover:opacity-40 duration-200' />
                     {/* content */}
-                    <div className='text-white text-2xl w-full'>
-                        <div className="flex justify-between items-center pb-5 mb-3 border-b-2">
+                    <div className=' text-slate-900 text-2xl w-full'>
+                        <div className="flex justify-between items-center pb-5 mb-3 border-b-2 border-slate-400">
                             <h2>
                                 {data.TextTopL}
                             </h2>
@@ -41,8 +41,8 @@ export default function BigImg({data}) {
                     </div>
                 </div>
             ) : null}
-            <HomeBtn type="fixed"/>
-
+            {btn == true ? <HomeBtn type="fixed"/> : null}
+            {btn === 'md' ? <HomeBtn type="fixed" className="hidden md:flex"/> : null}
         </div>
     )
 }

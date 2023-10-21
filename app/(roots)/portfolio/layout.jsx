@@ -1,8 +1,8 @@
 export const metadata = {
-    title: "Tai's taiche.tw | 聯絡方式",
+    title: "Tai's taiche.tw | 作品集",
 }
 
-export default function ContactLayout( {children} ) {
+export default function PortfolioLayout( {children} ) {
     return (
         <>
             {children}

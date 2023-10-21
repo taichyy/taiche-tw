@@ -34,7 +34,7 @@ export default function HomePage() {
             <aside className='bg-white w-3/4 md:w-3/12'>
                 <HomeBtn />
                 <Hamburger onClick={()=>handleClick()} />
-                <div className='ml-10 mt-20'>
+                <div className='ml-10 mt-10 md:mt-20'>
                     <div>
                         <h3 className='text-[#999]'>INTRO.</h3>
                         <p className='pt-5 pr-5 leading-8 text-justify'>
@@ -43,17 +43,17 @@ export default function HomePage() {
                         <Link href="/about">
                             <span className='inline-block mt-10 py-1 hover:bg-[#EBFF00] duration-300'>
                                 <span className='bg-[#EBFF00] px-2'>&gt;</span>
-                                <span className='pl-3 px-2 text-sm font-bold'>About me</span>
+                                <span className='pl-3 px-2 text-sm cursor-pointer hover:font-bold'>About me</span>
                             </span>
                         </Link>
                     </div>
-                    <div>
+                    <div className='text-sm'>
                         <h3 className='text-[#999] mt-12'>CONTACT.</h3>
-                        <div className='pt-1'>
+                        <div className='pt-4'>
                             <span className='icon-line grayscale pr-2' />
                             taichenyen
                         </div>
-                        <div>
+                        <div className='break-all pt-1'>
                             <span className='icon-phone pr-2' />
                             0963-121-279
                         </div>
