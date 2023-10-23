@@ -19,7 +19,7 @@ const Resume = () => {
     return (
     <div>
         <nav>
-            <HomeBtn type="fixed"/>
+            <HomeBtn type="fixed" className="hidden"/>
             <Hamburger />
         </nav>
         <BigImg data={data} btn="md" />
@@ -56,14 +56,16 @@ const Resume = () => {
                         2023/10 -
                     </h3>
                     <h3 className="font-bold text-lg pt-3 text-slate-950">
-                        網頁前端工程師
+                        網頁設計師
                     </h3>
                     <h4 className="text-sm text-slate-500">
                         雲書苑教育科技有限公司
                     </h4>
                     <p className="pt-3 text-sm">
                         公司主要產品為快刀論文原創性比對系統。<br/>
-                        前端工程師主要進行產品之設計稿畫面實現、Web-based應用開發、API串接等。
+                        工作內容：<br/>
+                        1. php 後端程式、RestfulAPI建置。<br/>
+                        2. MySQL 關聯式資料庫建構規劃。
                     </p>
                 </article>
             </div>
