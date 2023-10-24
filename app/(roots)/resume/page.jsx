@@ -35,7 +35,7 @@ const Resume = () => {
                 <h2 className="bg-[#EBFF00] text-slate-800 text-lg w-fit px-6 py-2 tracking-wider font-semibold">
                     教育程度
                 </h2>
-                <article className="pl-5 pt-3">
+                <div className="pl-5 pt-3">
                     <h3 className=" text-slate-500">
                         2019/09 - 2023/07
                     </h3>
@@ -45,13 +45,13 @@ const Resume = () => {
                     <h4 className="text-sm text-slate-500">
                         資訊管理系
                     </h4>
-                </article>
+                </div>
             </div>
             <div>
                 <h2 className="bg-[#EBFF00] text-slate-800 text-lg w-fit px-6 py-2 tracking-wider font-semibold">
                     工作經驗
                 </h2>
-                <article className="pl-5 pt-3 md:mb-20">
+                <div className="pl-5 pt-3 md:mb-20">
                     <h3 className=" text-slate-500">
                         2023/10 -
                     </h3>
@@ -67,13 +67,13 @@ const Resume = () => {
                         1. php 後端程式、RestfulAPI建置。<br/>
                         2. MySQL 關聯式資料庫建構規劃。
                     </p>
-                </article>
+                </div>
             </div>
             <div>
                 <h2 className="bg-[#EBFF00] text-slate-800 text-lg w-fit px-6 py-2 tracking-wider font-semibold">
                     工作技能
                 </h2>
-                <article className="pl-5 pt-3">
+                <div className="pl-5 pt-3">
                     <h3 className="font-bold text-lg pt-3 text-slate-950">
                         前端網頁開發
                     </h3>
@@ -84,7 +84,7 @@ const Resume = () => {
                                 <ResumePercent percent={90}/>
                             </li>
                             <li>
-                                <h4>CSS</h4>
+                                <h4>CSS + tailwindCSS</h4>
                                 <ResumePercent percent={90}/>
                             </li>
                             <li>
@@ -101,8 +101,8 @@ const Resume = () => {
                             </li>
                         </ul>
                     </div>
-                </article>
-                <article className="pl-5 pt-3">
+                </div>
+                <div className="pl-5 pt-3">
                     <h3 className="font-bold text-lg pt-3 text-slate-950">
                         後端網頁開發
                     </h3>
@@ -126,8 +126,8 @@ const Resume = () => {
                             </li>
                         </ul>
                     </div>
-                </article>
-                <article className="pl-5 pt-3 md:mb-20">
+                </div>
+                <div className="pl-5 pt-3 md:mb-20">
                     <h3 className="font-bold text-lg pt-3 text-slate-950">
                         其他技能
                     </h3>
@@ -143,13 +143,13 @@ const Resume = () => {
                             </li>
                         </ul>
                     </div>
-                </article>
+                </div>
             </div>
             <div>
                 <h2 className="bg-[#EBFF00] text-slate-800 text-lg w-fit px-6 py-2 tracking-wider font-semibold">
                     自我介紹
                 </h2>
-                <article className="pl-5 pt-3">
+                <div className="pl-5 pt-3">
                     <div className="bg-white px-5 py-6 mt-2 mr-5">
                         <p className="mb-6">
                             您好，我叫嚴太成，是一名前端寫得更好，專精於NextJS(基於React)的全端網頁工程師。
@@ -181,20 +181,20 @@ const Resume = () => {
                         </p>
                     </div>
                        
-                </article>
+                </div>
             </div>
             <div>
                 <h2 className="bg-[#EBFF00] text-slate-800 text-lg w-fit px-6 py-2 tracking-wider font-semibold">
                     外語能力
                 </h2>
-                <article className="pl-5 pt-3">
+                <div className="pl-5 pt-3">
                     <h3 className="font-bold text-lg pt-3 text-slate-950">
                         英語
                     </h3>
                     <h4 className="text-sm text-slate-500">
                         TOEIC多益 795分
                     </h4>
-                </article>
+                </div>
             </div>
             <div>
                 <h2 className="bg-[#EBFF00] text-slate-800 text-lg w-fit px-6 py-2 tracking-wider font-semibold">

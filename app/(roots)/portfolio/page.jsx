@@ -4,6 +4,14 @@ import Image from "next/image";
 import Hamburger from "@/components/hamburger/hamburger";
 import HomeBtn from "@/components/home-btn";
 import PortfolioMore from "../../../components/portfolio-more";
+import {
+    Card,
+    CardContent,
+    CardDescription,
+    CardFooter,
+    CardHeader,
+    CardTitle,
+} from "@/components/ui/card"
 
 import { portfolio } from "@/lib/data";
 
@@ -18,35 +26,42 @@ const Portfolio = () => {
         <main className="px-5 mb-10 md:px-72 md:grid">
             <h2 className="mt-28 md:mt-40 text-center text-3xl tracking-wider font-bold text-slate-600 border-b-2 w-fit pb-2 mx-auto border-slate-600 px-3">實務作品</h2>
         </main>
-        <div className="flex mx-6 flex-col gap-10 md:grid md:grid-cols-2 xl:grid-cols-3 md:gap-10 md:mx-14 mb-10">
+        <div className="
+            flex mx-6 flex-col md:mx-14 mb-10 gap-2
+            sm:grid sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 
+        ">
             {portfolio.map( (item,index) => (
-                <div key={index}>
-                    <div className="relative w-full aspect-video">
-                        <Image
-                            fill
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            alt={`${item.title} Image`}
-                            src={item.img}
-                            className="z-10"
-                        />
-                        <div className="absolute z-20 w-full h-full opacity-0 hover:opacity-95 duration-300 bg-[#f6f6f6] flex flex-col items-center justify-center">
-                            <span className="font-semibold text-lg text-center">
-                                {item.title}
-                            </span>
-                            <span className=" text-[#e31b6d] text-base px-10 flex items-center flex-col">
-                                {item.subtitle.split('^t').map( (line, index) => (
-                                    <div key={line}>
-                                        {line}
-                                    </div>
-                                ))}
-                                <span className="break-all">
-                                    {item.language}
+                <Card className="w-11/12 mx-auto mb-10" key={index}>
+                    <CardHeader>
+                        <CardTitle className="text-xl">
+                            {item.title}
+                        </CardTitle>
+                        <CardDescription>
+                            {item.subtitle.split('^t').map( (line, index) => (
+                                <span key={line} className="block">
+                                    {line}
                                 </span>
+                            ))}
+                            <span className="break-all">
+                                {item.language}
                             </span>
-                            <PortfolioMore data={item}/>
+                        </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                        <div className="relative w-full rounded-sm overflow-hidden aspect-video">
+                            <Image
+                                fill
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                alt={`${item.title} Image`}
+                                src={item.img}
+                                className=""
+                            />
                         </div>
-                    </div>
-                </div>
+                    </CardContent>
+                    <CardFooter className="flex justify-between">
+                        <PortfolioMore data={item}/>
+                    </CardFooter>
+                </Card>
             ))}
         </div>
     </div>
