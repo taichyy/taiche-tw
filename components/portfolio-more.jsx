@@ -24,7 +24,7 @@ const PortfolioMore = ({data}) => {
                 了解更多
             </div>
         </DialogTrigger>
-        <DialogContent className="flex flex-row">
+        <DialogContent className="flex flex-col-reverse md:flex-row">
             <div className="mt-5">
                 <DialogHeader>
                     <DialogTitle className="text-left text-xl">
@@ -72,7 +72,7 @@ const PortfolioMore = ({data}) => {
                     alt={`${data.img.split('/')[data.img.split('/').length-1]} Image`}
                     width={500}
                     height={500}
-                    className="aspect-video hover:opacity-95 duration-200"
+                    className="aspect-video hover:opacity-95 duration-200 mx-auto"
                 />
             </div>
         </DialogContent>
