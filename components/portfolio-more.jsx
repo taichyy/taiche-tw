@@ -66,7 +66,7 @@ const PortfolioMore = ({data}) => {
                     </DialogClose>
                 </DialogFooter>
             </div>
-            <div className="mt-5 mx-3">
+            <div className="mt-5 md:mx-3">
                 <Image
                     src={data.img}
                     alt={`${data.img.split('/')[data.img.split('/').length-1]} Image`}
