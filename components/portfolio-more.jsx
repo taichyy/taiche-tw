@@ -25,7 +25,7 @@ const PortfolioMore = ({data}) => {
             </div>
         </DialogTrigger>
         <DialogContent className="flex flex-col-reverse md:flex-row">
-            <div className="mt-5">
+            <div className="mt-5 flex-1">
                 <DialogHeader>
                     <DialogTitle className="text-left text-xl">
                         {data.title}
@@ -66,7 +66,7 @@ const PortfolioMore = ({data}) => {
                     </DialogClose>
                 </DialogFooter>
             </div>
-            <div className="mt-5">
+            <div className="mt-5 mx-3">
                 <Image
                     src={data.img}
                     alt={`${data.img.split('/')[data.img.split('/').length-1]} Image`}
