@@ -72,7 +72,7 @@ const PortfolioMore = ({data}) => {
                     alt={`${data.img.split('/')[data.img.split('/').length-1]} Image`}
                     width={500}
                     height={500}
-                    className="aspect-video hover:opacity-95 duration-200 mx-auto"
+                    className="aspect-video h-auto hover:opacity-95 duration-200 mx-auto"
                 />
             </div>
         </DialogContent>
