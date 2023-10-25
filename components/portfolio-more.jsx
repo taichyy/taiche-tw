@@ -1,6 +1,7 @@
 "use client"
 import Image from "next/image";
-import { ArrowUpRightSquare, X } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRightSquare, X } from "lucide-react";
+import { useRef, useState } from "react";
  
 import { Button } from "@/components/ui/button"
 import {
@@ -16,6 +17,29 @@ import {
 import { Separator } from "./ui/separator";
 
 const PortfolioMore = ({data}) => {
+
+    const [num, setNum] = useState(0)
+    const [imgOpacity, setImgOpacity] = useState('opacity-100')
+
+    const handleClick = (status) => {
+        if( status == true){
+            if(num != data.img.length-1){
+                setNum( prev => prev+1 )
+                setImgOpacity('opacity-0')
+                setTimeout(()=>{
+                    setImgOpacity('opacity-100')
+                },300)
+            }
+        }else {
+            if(num != 0) {
+                setNum( prev => prev-1 )
+                setImgOpacity('opacity-0')
+                setTimeout(()=>{
+                    setImgOpacity('opacity-100')
+                },300)
+            }
+        }
+    }
 
     return ( 
     <Dialog>
@@ -68,12 +92,16 @@ const PortfolioMore = ({data}) => {
             </div>
             <div className="mt-5 md:mx-3">
                 <Image
-                    src={data.img}
-                    alt={`${data.img.split('/')[data.img.split('/').length-1]} Image`}
+                    src={data.img[num]}
+                    alt={`${data.img[num].split('/')[data.img[num].split('/').length-1]} Image`}
                     width={500}
                     height={500}
-                    className="aspect-video h-auto hover:opacity-95 duration-200 mx-auto"
+                    className={`aspect-video h-auto hover:opacity-95 duration-300 mx-auto ${imgOpacity}`}
                 />
+                <div className="flex justify-between mt-1">
+                    <ArrowLeft className={`cursor-pointer duration-100 ${num == 0 && 'opacity-0 cursor-default'}`} size={30} onClick={()=>handleClick(false)}/>
+                    <ArrowRight className={`cursor-pointer duration-100 ${num == data.img.length-1 && 'opacity-0 cursor-default'}`} size={30} onClick={()=>handleClick(true)}/>
+                </div>
             </div>
         </DialogContent>
     </Dialog>
