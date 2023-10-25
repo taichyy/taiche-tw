@@ -98,7 +98,7 @@ const Portfolio = () => {
                                 fill
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 alt={`${item.title} Image`}
-                                src={item.img}
+                                src={item.img[0]}
                                 className="hover:opacity-90 duration-200"
                             />
                         </div>
