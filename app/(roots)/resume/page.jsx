@@ -53,7 +53,7 @@ const Resume = () => {
                 </h2>
                 <div className="pl-5 pt-3 md:mb-20">
                     <h3 className=" text-slate-500">
-                        2023/10 -
+                        2023/10 - 2023/11
                     </h3>
                     <h3 className="font-bold text-lg pt-3 text-slate-950">
                         網頁設計師
@@ -65,7 +65,9 @@ const Resume = () => {
                         公司主要產品為快刀論文原創性比對系統。<br/>
                         工作內容：<br/>
                         1. php 後端程式、RestfulAPI建置。<br/>
-                        2. MySQL 關聯式資料庫建構規劃。
+                        2. MySQL 關聯式資料庫建構規劃。<br/>
+                        3. 前端網頁設計、撰寫。<br/>
+                        4. 網頁部屬
                     </p>
                 </div>
             </div>
