@@ -53,21 +53,18 @@ const Resume = () => {
                 </h2>
                 <div className="pl-5 pt-3 md:mb-20">
                     <h3 className=" text-slate-500">
-                        2023/10 - 2023/11
+                        2023/12 - 2024/03
                     </h3>
                     <h3 className="font-bold text-lg pt-3 text-slate-950">
-                        網頁設計師
+                        程式設計師
                     </h3>
                     <h4 className="text-sm text-slate-500">
-                        雲書苑教育科技有限公司
+                        富有玩具有限公司（NX樂園）
                     </h4>
                     <p className="pt-3 text-sm">
-                        公司主要產品為快刀論文原創性比對系統。<br/>
-                        工作內容：<br/>
-                        1. php 後端程式、RestfulAPI建置。<br/>
-                        2. MySQL 關聯式資料庫建構規劃。<br/>
-                        3. 前端網頁設計、撰寫。<br/>
-                        4. 網頁部屬
+                        協助公司完成：<br />
+                        1. 海報生成系統，透過海報自動生成，降低公司製作海報80%之時間。（每日皆須製作2~3張）<br />
+                        2. Line Liff官方會員中心前端頁面。<br />
                     </p>
                 </div>
             </div>
