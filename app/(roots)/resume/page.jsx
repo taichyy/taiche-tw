@@ -5,6 +5,7 @@ import BigImg from "@/components/bigImg";
 import Hamburger from "@/components/hamburger/hamburger";
 import HomeBtn from "@/components/home-btn";
 import ResumePercent from "@/components/resume-percent/resume-percent";
+import JobBlock from "@/components/job-block";
 
 const Resume = () => {
 
@@ -48,24 +49,31 @@ const Resume = () => {
                 </div>
             </div>
             <div>
-                <h2 className="bg-[#EBFF00] text-slate-800 text-lg w-fit px-6 py-2 tracking-wider font-semibold">
+                <h2 className="bg-[#EBFF00] text-slate-800 text-lg w-fit px-6 mb-3 py-2 tracking-wider font-semibold">
                     工作經驗
                 </h2>
-                <div className="pl-5 pt-3 md:mb-20">
-                    <h3 className=" text-slate-500">
-                        2023/12 - 2024/03
-                    </h3>
-                    <h3 className="font-bold text-lg pt-3 text-slate-950">
-                        程式設計師
-                    </h3>
-                    <h4 className="text-sm text-slate-500">
-                        富有玩具有限公司（NX樂園）
-                    </h4>
-                    <p className="pt-3 text-sm">
-                        在職期間協助公司完成：<br />
-                        1. 海報自動生成系統，透過海報自動生成Adobe AI檔案，降低公司製作海報80%之時間。<br />
-                        2. Line Liff官方會員中心前端頁面。<br />
-                    </p>
+                <div className="flex flex-col gap-5 mb-7">
+                    <JobBlock
+                        duration={"2024/04 - "}
+                        title={"全端網頁工程師"}
+                        coporation={"誠諾工程技術股份有限公司"}
+                        jd={`
+                        主要使用<br/>
+                        NextJS+TypeScript、zod、React-Hook-Form等程式語言及套件開發公司用ERP系統。<br/>
+                        <br/>
+                        獨自一人由0到100開發全套ERP的前端網頁程式碼、架構。<br/>
+                        `}
+                    />
+                    <JobBlock
+                        duration={"2023/12 - 2024/03"}
+                        title={"軟體工程師"}
+                        coporation={"富有玩具有限公司（NX樂園）"}
+                        jd={`
+                        在職期間協助公司完成：<br/>
+                        1. 海報自動生成系統，透過海報自動生成Adobe AI檔案，降低公司製作海報80%之時間。<br/>
+                        2. Line Liff官方會員中心前端頁面。<br/>
+                        `}
+                    />
                 </div>
             </div>
             <div>
