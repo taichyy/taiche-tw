@@ -61,7 +61,7 @@ const Resume = () => {
                         主要使用<br/>
                         NextJS+TypeScript、zod、React-Hook-Form等程式語言及套件開發公司用ERP系統。<br/>
                         <br/>
-                        獨自一人由0到100開發全套ERP的前端網頁程式碼、架構。<br/>
+                        獨自一人由0到100開發超過萬行程式碼、全套ERP的前端網頁程式碼、架構。<br/>
                         `}
                     />
                     <JobBlock
