@@ -73,23 +73,33 @@ export default function HomePage() {
                 />
                 <nav style={ nav ? {opacity:1} : {opacity:0}} className='mr-5 mb-10 text-2xl font-semibold z-10 md:mr-20 md:mb-20 md:text-4xl text-right duration-200'>
                     <div className='flex flex-col'>
-                        <span onMouseEnter={()=>handleHover(1)} onMouseLeave={()=>handleHover(0)} className='mb-8'>
-                            <Link href="/portfolio">
-                                作品集
-                            </Link>
-                        </span>
+                        {/* Duplicate "作品集" twice because I need it to be in reversed order. */}
                         {process.env.NEXT_PUBLIC_ENV == "Job" ? (
+                        <>
                             <span onMouseEnter={()=>handleHover(2)} onMouseLeave={()=>handleHover(0)} className='mb-8'>
                                 <Link href="/resume">
                                     個人履歷
                                 </Link>
                             </span>
+                            <span onMouseEnter={()=>handleHover(1)} onMouseLeave={()=>handleHover(0)} className='mb-8'>
+                                <Link href="/portfolio">
+                                    作品集
+                                </Link>
+                            </span>
+                        </>
                         ) : process.env.NEXT_PUBLIC_ENV == "FreeLancer" && (
+                        <>
                             <span onMouseEnter={()=>handleHover(2)} onMouseLeave={()=>handleHover(0)} className='mb-8'>
                                 <Link href="/about">
                                     關於我
                                 </Link>
                             </span>
+                            <span onMouseEnter={()=>handleHover(1)} onMouseLeave={()=>handleHover(0)} className='mb-8'>
+                                <Link href="/portfolio">
+                                    作品集
+                                </Link>
+                            </span>
+                        </>
                         )}
                         <span onMouseEnter={()=>handleHover(3)} onMouseLeave={()=>handleHover(0)}>
                             <Link href="/contact">
