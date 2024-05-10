@@ -38,7 +38,9 @@ export default function HomePage() {
                     <div>
                         <h3 className='text-[#999]'>INTRO.</h3>
                         <p className='pt-5 pr-5 leading-8 text-justify'>
-                            我是一個既新鮮又不新鮮的人。新鮮於大學剛畢業不久；不新鮮於有5年的網頁接案經歷。是一個專注於Next.JS、更擅長前端的全端網頁工程師。
+                            我是嚴太成，是一個專注於Next.JS、更擅長前端的全端網頁工程師。<br/>
+    
+                            雖然只有22歲，但已經有5年的網頁程式開發經歷。<br/>
                         </p>
                         <Link href="/about">
                             <span className='inline-block mt-10 py-1 hover:bg-[#EBFF00] duration-300'>
@@ -76,11 +78,19 @@ export default function HomePage() {
                                 作品集
                             </Link>
                         </span>
-                        <span onMouseEnter={()=>handleHover(2)} onMouseLeave={()=>handleHover(0)} className='mb-8'>
-                            <Link href="/resume">
-                                個人履歷
-                            </Link>
-                        </span>
+                        {process.env.NEXT_PUBLIC_ENV == "Job" ? (
+                            <span onMouseEnter={()=>handleHover(2)} onMouseLeave={()=>handleHover(0)} className='mb-8'>
+                                <Link href="/resume">
+                                    個人履歷
+                                </Link>
+                            </span>
+                        ) : process.env.NEXT_PUBLIC_ENV == "FreeLancer" && (
+                            <span onMouseEnter={()=>handleHover(2)} onMouseLeave={()=>handleHover(0)} className='mb-8'>
+                                <Link href="/about">
+                                    關於我
+                                </Link>
+                            </span>
+                        )}
                         <span onMouseEnter={()=>handleHover(3)} onMouseLeave={()=>handleHover(0)}>
                             <Link href="/contact">
                                 聯絡方式

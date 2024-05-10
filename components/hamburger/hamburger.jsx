@@ -47,11 +47,13 @@ export default function Hamburger({onClick}) {
                         <h4>作品集</h4>
                     </li>
                 </Link>
-                <Link href="/resume">
-                    <li>
-                        <h4>個人履歷</h4>
-                    </li>
-                </Link>
+                {process.env.NEXT_PUBLIC_ENV == "Job" && (
+                    <Link href="/resume">
+                        <li>
+                            <h4>個人履歷</h4>
+                        </li>
+                    </Link>
+                )}
                 <Link href="/contact">
                     <li>
                         <h4>聯絡方式</h4>
