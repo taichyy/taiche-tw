@@ -70,11 +70,13 @@ export default function About() {
                 請到：<br/>
               </p>
               <div className="space-x-2">
-                <Link href="/resume" className={badgeVariants({ variant: "" })}>
-                  <span className="text-sm">
-                    個人簡歷
-                  </span>
-                </Link>
+                {process.env.NEXT_PUBLIC_ENV == "Job" && (
+                    <Link href="/resume" className={badgeVariants({ variant: "" })}>
+                        <span className="text-sm">
+                            個人簡歷
+                        </span>
+                    </Link>
+                )}
                 <Link href="/portfolio" className={badgeVariants({ variant: "" })}>
                   <span className="text-sm">
                     作 品 集
