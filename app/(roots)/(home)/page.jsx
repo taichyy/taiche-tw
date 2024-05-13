@@ -76,14 +76,14 @@ export default function HomePage() {
                         {/* Duplicate "作品集" twice because I need it to be in reversed order. */}
                         {process.env.NEXT_PUBLIC_ENV == "Job" ? (
                         <>
-                            <span onMouseEnter={()=>handleHover(2)} onMouseLeave={()=>handleHover(0)} className='mb-8'>
-                                <Link href="/resume">
-                                    個人履歷
-                                </Link>
-                            </span>
                             <span onMouseEnter={()=>handleHover(1)} onMouseLeave={()=>handleHover(0)} className='mb-8'>
                                 <Link href="/portfolio">
                                     作品集
+                                </Link>
+                            </span>
+                            <span onMouseEnter={()=>handleHover(2)} onMouseLeave={()=>handleHover(0)} className='mb-8'>
+                                <Link href="/resume">
+                                    個人履歷
                                 </Link>
                             </span>
                         </>
