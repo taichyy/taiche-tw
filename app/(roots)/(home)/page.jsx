@@ -1,7 +1,7 @@
 "use client"
 import Link from 'next/link'
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 
 import Hamburger from '@/components/hamburger/hamburger';
 import HomeBtn from '@/components/home-btn';
@@ -40,14 +40,16 @@ export default function HomePage() {
                         <p className='pt-5 pr-5 leading-8 text-justify'>
                             我是嚴太成，是一個專注於Next.JS、更擅長前端的全端網頁工程師。<br/>
     
-                            雖然只有22歲，但已經有5年的網頁程式開發經歷。<br/>
+                            23歲，但已經有5年的網頁程式開發經歷。<br/>
                         </p>
-                        <Link href="/about">
-                            <span className='inline-block mt-10 py-1 hover:bg-[#EBFF00] duration-300'>
-                                <span className='bg-[#EBFF00] px-2'>&gt;</span>
-                                <span className='pl-3 px-2 text-sm cursor-pointer hover:font-bold'>About me</span>
-                            </span>
-                        </Link>
+                        {process.env.NEXT_PUBLIC_ENV == "FreeLancer" && (
+                            <Link href="/about">
+                                <span className='inline-block mt-10 py-1 hover:bg-[#EBFF00] duration-300'>
+                                    <span className='bg-[#EBFF00] px-2'>&gt;</span>
+                                    <span className='pl-3 px-2 text-sm cursor-pointer hover:font-bold'>About me</span>
+                                </span>
+                            </Link>
+                        )}
                     </div>
                     <div className='text-sm'>
                         <h3 className='text-[#999] mt-12'>CONTACT.</h3>
@@ -67,7 +69,7 @@ export default function HomePage() {
                     src={img}
                     alt="Main image of website"
                     fill
-                    contain
+                    contain="true"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 60vw"
                     className='opacity-20 hover:opacity-50 duration-200 z-0 aspect-video'
                 />

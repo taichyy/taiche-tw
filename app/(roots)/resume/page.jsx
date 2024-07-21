@@ -229,6 +229,24 @@ const Resume = () => {
                     </Link>
                 </h3>
             </div>
+            <div>
+                <h2 className="bg-[#EBFF00] text-slate-800 text-lg w-fit px-6 py-2 tracking-wider font-semibold">
+                    相關證照
+                </h2>
+                <div className="pl-5 pt-3">
+                    <h3 className="font-bold text-lg pt-3 text-slate-950">
+                        <Image
+                            src="/images/resume/google_cloud_certificate.png"
+                            alt="China Steel Logo"
+                            width={640}
+                            height={75}
+                        />
+                    </h3>
+                    <h4 className="text-sm text-slate-500">
+                        Google Cloud 學程結業證書
+                    </h4>
+                </div>
+            </div>
         </main>
     </div>
     );

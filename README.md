@@ -2,7 +2,17 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, create an .env or .env.local file in the root folder,
+and add a env variable "NEXT_PUBLIC_ENV",
+set it as "Freelancer" || "Job",
+to determine it's for freelancing or interviewing.
+
+Check the difference between at:
+https://taiche.tw (job)
+or 
+https://taiche-me.vercel.app (freelancing)
+
+Second, run the development server:
 
 ```bash
 npm run dev
