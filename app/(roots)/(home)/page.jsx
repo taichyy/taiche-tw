@@ -38,9 +38,8 @@ export default function HomePage() {
                     <div>
                         <h3 className='text-[#999]'>INTRO.</h3>
                         <p className='pt-5 pr-5 leading-8 text-justify'>
-                            我是嚴太成，是一個專注於Next.JS、更擅長前端的全端網頁工程師。<br/>
-    
-                            23歲，但已經有5年的網頁程式開發經歷。<br/>
+                            我是嚴太成，一名專注於 Next.js、擅長 前端架構設計 的全端工程師。<br/>
+                            具備完整系統開發與商業化經驗，曾獨立打造並成功上線 ERP 產品。<br/>
                         </p>
                         {process.env.NEXT_PUBLIC_ENV == "FreeLancer" && (
                             <Link href="/about">
