@@ -1,6 +1,4 @@
-"use client"
 import Link from "next/link";
-import { useState } from "react";
 
 import styles from "./hamburger.module.css";
 
@@ -10,10 +8,31 @@ export default function Hamburger() {
     
     // Unfortunately, I can not find the author of this hamburger. If you know the author, please let me. 
     
-    const [nav, setNav] = useState(true)
+    const navLinks = [
+        {
+            text: "回首頁",
+            href: "/"
+        },
+        {
+            text: "關於我",
+            href: "/about"
+        },
+        {
+            text: "作品集",
+            href: "/portfolio"
+        },
+        {
+            text: "個人履歷",
+            href: "/resume"
+        },
+        {
+            text: "聯絡方式",
+            href: "/contact"
+        }
+    ]
 
     return (
-        <nav role="navigation" onClick={() => setNav(!nav)} className={styles.nav}>
+        <nav role="navigation" className={styles.nav}>
             <div className={styles.menuToggle}>
                 {/* A fake / hidden checkbox is used as click receiver, so you can use the :checked selector on it. */}
                 <input type="checkbox" />
@@ -23,31 +42,13 @@ export default function Hamburger() {
                 <span></span>
                 {/* Too bad the menu has to be inside of the button. But hey, it's pure CSS magic. */}
                 <ul className={styles.menu}>
-                    <Link href="/">
-                        <li>
-                            <h4 style={{ fontWeight: "800" }}>回首頁</h4>
-                        </li>
-                    </Link>
-                    <Link href="/about">
-                        <li>
-                            <h4>關於我</h4>
-                        </li>
-                    </Link>
-                    <Link href="/portfolio">
-                        <li>
-                            <h4>作品集</h4>
-                        </li>
-                    </Link>
-                    <Link href="/resume">
-                        <li>
-                            <h4>個人履歷</h4>
-                        </li>
-                    </Link>
-                    <Link href="/contact">
-                        <li>
-                            <h4>聯絡方式</h4>
-                        </li>
-                    </Link>
+                    {navLinks.map((link, index) => (
+                        <Link key={index} href={link.href}>
+                            <li>
+                                <h4 style={index == 0 ? { fontWeight: "800" } : {}}>{link.text}</h4>
+                            </li>
+                        </Link>
+                    ))}
                 </ul>
             </div>
         </nav>
