@@ -1,11 +1,9 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 
 import BigImg from "@/components/bigImg";
-import Hamburger from "@/components/hamburger/hamburger";
-import HomeBtn from "@/components/home-btn";
-import ResumePercent from "@/components/resume-percent/resume-percent";
 import JobBlock from "@/components/job-block";
+import ResumePercent from "@/components/resume-percent/resume-percent";
 
 const Resume = () => {
 
@@ -19,10 +17,6 @@ const Resume = () => {
 
     return (
     <div>
-        <nav>
-            <HomeBtn type="fixed" className="hidden"/>
-            <Hamburger />
-        </nav>
         <BigImg data={data} btn="md" />
         <Image 
             src="/images/resume/headshot.jpg"

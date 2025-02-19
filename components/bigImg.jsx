@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import Image from 'next/image';
+
 import HomeBtn from '@/components/home-btn';
 
 export default function BigImg({data, btn, height}) {

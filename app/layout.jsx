@@ -1,8 +1,7 @@
-import './globals.css'
 import { Analytics } from "@vercel/analytics/react"
 
-// ico-moon
-import '../public/icomoon/style.css';
+import "./globals.css"
+import "../public/icomoon/style.css";
 
 export const metadata = {
     title: "Tai's taiche.tw | HOME",
