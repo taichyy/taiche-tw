@@ -1,5 +1,6 @@
-'use client'
-import React, { useEffect, useState } from 'react';
+"use client"
+import { useEffect, useState } from "react";
+
 import styles from "./resume-percent.module.css"
 
 const ResumePercent = ({ percent }) => {

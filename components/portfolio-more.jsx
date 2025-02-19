@@ -1,20 +1,20 @@
 "use client"
 import Image from "next/image";
+import { useState } from "react";
 import { ArrowLeft, ArrowRight, ArrowUpRightSquare, X } from "lucide-react";
-import { useRef, useState } from "react";
  
-import { Button } from "@/components/ui/button"
 import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
+    Dialog,
+    DialogClose,
+    DialogContent,
+    DialogDescription,
+    DialogFooter,
+    DialogHeader,
+    DialogTitle,
+    DialogTrigger,
 } from "@/components/ui/dialog"
 import { Separator } from "./ui/separator";
+import { Button } from "@/components/ui/button"
 
 const PortfolioMore = ({data}) => {
 

@@ -1,9 +1,5 @@
-import Link from "next/link";
 import Image from "next/image";
 
-import Hamburger from "@/components/hamburger/hamburger";
-import HomeBtn from "@/components/home-btn";
-import PortfolioMore from "../../../components/portfolio-more";
 import {
     Card,
     CardContent,
@@ -12,26 +8,23 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-
 import { portfolio } from "@/lib/data";
+import PortfolioMore from "@/components/portfolio-more";
+
 
 const Portfolio = () => {
 
     return (
         <div>
-            <nav>
-                <HomeBtn type="fixed" className="hidden md:flex" />
-                <Hamburger />
-            </nav>
             <div className="px-5 mb-10 md:px-72 md:grid">
                 <h2 className="mt-28 md:mt-40 text-center text-3xl tracking-wider font-bold text-slate-600 border-b-2 w-fit pb-2 mx-auto border-slate-600 px-3">
                     實務作品
                 </h2>
             </div>
             <main className="
-            flex mx-6 flex-col md:mx-14 mb-2 gap-2
-            sm:grid sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 
-        ">
+                flex mx-6 flex-col md:mx-14 mb-2 gap-2
+                sm:grid sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 
+            ">
                 {portfolio.real.map((item, index) => (
                     <Card className="w-11/12 mx-auto mb-10" key={index}>
                         <CardHeader>
@@ -74,9 +67,9 @@ const Portfolio = () => {
                         </h2>
                     </div>
                     <main className="
-            flex mx-6 flex-col md:mx-14 mb-10 gap-2
-            sm:grid sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 
-        ">
+                        flex mx-6 flex-col md:mx-14 mb-10 gap-2
+                        sm:grid sm:grid-cols-2 md:grid-cols-3 2xl:grid-cols-4 
+                    ">
                         {portfolio.others.map((item, index) => (
                             <Card className="w-11/12 mx-auto mb-10" key={index}>
                                 <CardHeader>
