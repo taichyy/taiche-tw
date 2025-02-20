@@ -5,7 +5,7 @@ import HomeBtn from '@/components/home-btn';
 export default function BigImg({data, btn, height}) {
 
     return (
-    <div className={`w-screen relative ${height=="full" ? "h-screen" : "h-[80vh]" }`}>
+    <div className={`relative ${height=="full" ? "h-screen" : "h-[80vh]" }`}>
         <Image 
             src={data.Bgc}
             alt={data.BgAlt}
