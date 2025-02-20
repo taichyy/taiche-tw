@@ -3,7 +3,6 @@ import Image from "next/image";
 const Contact = () => {
     const data = {
         contact_mail: "taichedev@gmail.com",
-        contact_line: "taichenyen"
     }
     
     return (
@@ -17,10 +16,6 @@ const Contact = () => {
                 <h4 className="mt-5">
                     <span className="icon-gmail mr-2"></span>
                     {data.contact_mail}
-                </h4>
-                <h4>
-                    <span className="icon-line mr-2"></span>
-                    {data.contact_line}
                 </h4>
             </div>
             <Image
