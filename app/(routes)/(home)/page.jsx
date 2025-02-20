@@ -7,7 +7,7 @@ import Hamburger from "@/components/hamburger/hamburger";
 export default function HomePage() {
     const data = {
         home_intro: "我是嚴太成，一名專注於 Next.js、擅長前端架構設計的全端工程師。\n\n具備完整系統開發與商業化經驗，曾獨立打造並成功上線 ERP 產品。",
-        home_phone: "0963-121-279"
+        home_mail: "taichedev@gmail.com"
     }
 
     return (
@@ -32,8 +32,8 @@ export default function HomePage() {
                         <h3 className='text-[#999]'>CONTACT.</h3>
                         <div className='flex flex-col gap-1'>
                             <div className='break-all'>
-                                <span className='icon-phone pr-2' />
-                                {data.home_phone}
+                                <span className='icon-gmail pr-2' />
+                                {data.home_mail}
                             </div>
                         </div>
                     </div>
