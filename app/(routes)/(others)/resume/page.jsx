@@ -170,7 +170,7 @@ const Resume = () => {
                             <div className="bg-white px-5 py-6 mt-2 mr-5">
                                 <ul className="space-y-3">
                                     {skill.skill_desc.map((desc, index) => (
-                                        <li>
+                                        <li key={index}>
                                             <h4>{desc.skill_name}</h4>
                                             <ResumePercent percent={desc.skill_percent} />
                                         </li>
