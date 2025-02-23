@@ -2,18 +2,17 @@ import Image from 'next/image';
 
 import HomeBtn from '@/components/home-btn';
 
-export default function BigImg({data, btn, height}) {
+export default function BigImg({ bgc, bgAlt, name, btn, height }) {
 
     return (
-    <div className={`relative ${height=="full" ? "h-screen" : "h-[80vh]" }`}>
-        <Image 
-            src={data.Bgc}
-            alt={data.BgAlt}
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 60vw"
-            className='object-cover'
-        />
-        {data ? (
+        <div className={`relative ${height == "full" ? "h-screen" : "h-[80vh]"}`}>
+            <Image
+                src={bgc}
+                alt={bgAlt}
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 60vw"
+                className='object-cover'
+            />
             <div className="
                 absolute top-1/3 md:top-1/2 left-[12.5%] md:left-1/4
                 flex items-center
@@ -27,22 +26,21 @@ export default function BigImg({data, btn, height}) {
                 <div className=' text-black text-2xl w-full'>
                     <div className="flex justify-between items-center pb-5 mb-3 border-b-2 border-slate-400">
                         <h2>
-                            {data.TextTopL}
+                            個人履歷
                         </h2>
                         <h5 className='text-base'>
-                            {data.TextTopR}
+                            Resume
                         </h5>
                     </div>
                     <div className='mt-5'>
                         <h3>
-                            {data.TextDown}
+                            {name}
                         </h3>
                     </div>
                 </div>
             </div>
-        ) : null}
-        {btn == true ? <HomeBtn type="fixed"/> : null}
-        {btn === 'md' ? <HomeBtn type="fixed" className="hidden md:flex"/> : null}
-    </div>
+            {btn == true ? <HomeBtn type="fixed" /> : null}
+            {btn === 'md' ? <HomeBtn type="fixed" className="hidden md:flex" /> : null}
+        </div>
     )
 }
