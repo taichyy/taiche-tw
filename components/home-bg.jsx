@@ -5,25 +5,25 @@ import { useState } from 'react';
 
 const HomeBg = () => {
     const items = {
+        // 0: {
+        //     title: "關於我",
+        //     img: "/images/home/home_mainbgc.jpg",
+        //     alt: "Home background image by Tai-Cheng, Yen",
+        //     link: "/about"
+        // },
         0: {
-            title: "關於我",
-            img: "/images/home/home_mainbgc.jpg",
-            alt: "Home background image by Tai-Cheng, Yen",
-            link: "/about"
-        },
-        1: {
             title: "作品集",
             img: "/images/home/home_portfolio.jpg",
             alt: "Home background image for portfolio",
             link: "/portfolio"
         },
-        2: {
+        1: {
             title: "個人履歷",
             img: "/images/home/home_resume.jpg",
             alt: "Home background image for resume",
             link: "/resume"
         },
-        3: {
+        2: {
             title: "聯絡方式",
             img: "/images/home/home_contact.jpg",
             alt: "Home background image for contact page",

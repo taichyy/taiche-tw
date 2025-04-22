@@ -21,12 +21,12 @@ export default function HomePage() {
                         <p className='leading-8 text-justify whitespace-pre-line'>
                             {data.home_intro}
                         </p>
-                        <Link href="/about">
+                        {/* <Link href="/about">
                             <span className='inline-block py-1 hover:bg-[#EBFF00] duration-300'>
                                 <span className='bg-[#EBFF00] px-2'>&gt;</span>
                                 <span className='pl-3 px-2 text-sm cursor-pointer hover:font-bold'>About me</span>
                             </span>
-                        </Link>
+                        </Link> */}
                     </div>
                     <div className='text-sm flex flex-col gap-3'>
                         <h3 className='text-[#999]'>CONTACT.</h3>
