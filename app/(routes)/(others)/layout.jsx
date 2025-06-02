@@ -1,4 +1,4 @@
-import HomeBtn from "@/components/home-btn";
+import HomeBtn from "@/app/(routes)/(home)/(components)/home-btn";
 
 const OthersLayout = ({ children }) => {
 
