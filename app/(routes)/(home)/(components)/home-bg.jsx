@@ -17,13 +17,13 @@ const HomeBg = () => {
             alt: "Home background image for portfolio",
             link: "/portfolio"
         },
+        // 1: {
+        //     title: "個人履歷",
+        //     img: "/images/home/home_resume.jpg",
+        //     alt: "Home background image for resume",
+        //     link: "/resume"
+        // },
         1: {
-            title: "個人履歷",
-            img: "/images/home/home_resume.jpg",
-            alt: "Home background image for resume",
-            link: "/resume"
-        },
-        2: {
             title: "聯絡方式",
             img: "/images/home/home_contact.jpg",
             alt: "Home background image for contact page",
