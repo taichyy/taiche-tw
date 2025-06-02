@@ -13,7 +13,7 @@ const WorkIdInPortfolioPage = ({
     return (
         <section className="py-32">
             <div className="container max-w-7xl">
-                <div className="mb-10">
+                <div className="mb-10 mt-2">
                     <Link href="/portfolio">
                         <Button
                             type="button"
