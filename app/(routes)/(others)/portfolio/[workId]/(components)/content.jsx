@@ -6,11 +6,13 @@ import {
     Lightbulb,
     ListChecks,
 } from "lucide-react";
+import Link from "next/link";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
@@ -20,6 +22,8 @@ const Content = ({
     // For on this page section navigation
     const [activeSection, setActiveSection] = useState(null);
     const sectionRefs = useRef({});
+
+    const linkAvailable = (work?.link && work.link !== "");
 
     useEffect(() => {
         const sections = Object.keys(sectionRefs.current);
@@ -86,19 +90,44 @@ const Content = ({
 
     return (
 
-        <div className="relative grid-cols-3 gap-20 lg:grid text-slate-800 leading-8">
+        <div className="mt-2 relative grid-cols-3 gap-20 lg:grid text-slate-800 leading-8">
             <div className="lg:col-span-2">
                 <div>
+                    <div className="flex justify-between items-center -mt-1 mb-4">
+                        <Link href="/portfolio">
+                            <Button
+                                type="button"
+                                variant="outline"
+                            >
+                                <ArrowLeft className="mr-2" size={14} />
+                                返回
+                            </Button>
+                        </Link>
+                        <a href={linkAvailable ? work.link : ""} target="_blank">
+                            <Button
+                                type="button"
+                                variant={linkAvailable ? "default" : "secondary"}
+                            >
+                                {linkAvailable
+                                    ? "作品連結"
+                                    : "暫無連結"
+                                }
+                            </Button>
+                        </a>
+                    </div>
+
                     {work?.badges && !!work.badges.length && work.badges.map((badge, index) => (
                         <Badge variant="outline" key={index}>
                             {badge}
                         </Badge>
                     ))}
+
                     {work?.title && (
                         <h1 className="mt-3 text-3xl font-extrabold">
                             {work.title}
                         </h1>
                     )}
+
                     {work?.subtitle && (
                         <h2 className="mt-2 text-lg text-muted-foreground whitespace-pre-line">
                             {work.subtitle}

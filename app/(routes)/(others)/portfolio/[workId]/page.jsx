@@ -1,8 +1,4 @@
-import Link from "next/link";
-import { ArrowLeft } from "lucide-react";
-
 import { portfolio } from "@/lib/data";
-import { Button } from "@/components/ui/button";
 import { Content } from "./(components)/content";
 
 const WorkIdInPortfolioPage = ({
@@ -13,17 +9,6 @@ const WorkIdInPortfolioPage = ({
     return (
         <section className="py-32">
             <div className="container max-w-7xl">
-                <div className="mb-10 mt-2">
-                    <Link href="/portfolio">
-                        <Button
-                            type="button"
-                            variant="outline"
-                        >
-                            <ArrowLeft className="mr-2" size={14} />
-                            返回
-                        </Button>
-                    </Link>
-                </div>
                 {work ? (
                     <div className="">
                         <Content work={work} />
