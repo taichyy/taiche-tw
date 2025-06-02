@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Contact = () => {
     const data = {
-        contact_mail: "taichedev@gmail.com",
+        contact_mail: "chinzeilulu@gmail.com",
     }
     
     return (
