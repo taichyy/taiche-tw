@@ -21,10 +21,10 @@ export default function Hamburger() {
             text: "作品集",
             href: "/portfolio"
         },
-        {
-            text: "個人履歷",
-            href: "/resume"
-        },
+        // {
+        //     text: "個人履歷",
+        //     href: "/resume"
+        // },
         {
             text: "聯絡方式",
             href: "/contact"
