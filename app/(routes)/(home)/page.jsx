@@ -1,5 +1,5 @@
 import HomeBg from "./(components)/home-bg";
-import HomeBtn from "./(components)/home-btn";
+import HomeBtn from "@/components/home-btn";
 import Hamburger from "@/components/hamburger/hamburger";
 
 export default function HomePage() {

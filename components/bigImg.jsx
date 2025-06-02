@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import HomeBtn from '@/app/(routes)/(home)/(components)/home-btn';
+import HomeBtn from '@/components/home-btn';
 
 export default function BigImg({ bgc, bgAlt, name, btn, height }) {
 
