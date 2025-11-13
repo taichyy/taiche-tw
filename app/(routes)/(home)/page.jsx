@@ -13,7 +13,7 @@ export default function HomePage() {
             <aside className='bg-white flex flex-col gap-10 px-[1.5rem] pt-[2rem]'>
                 <HomeBtn />
                 <Hamburger />
-                <div className=' flex flex-col gap-8'>
+                <div className=' flex flex-col gap-8' data-aos="fade-up" data-aos-duration="1000">
                     <div className='flex flex-col gap-3'>
                         <h3 className='text-[#999]'>INTRO.</h3>
                         <p className='leading-8 text-justify whitespace-pre-line'>
