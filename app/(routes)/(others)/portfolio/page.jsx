@@ -43,12 +43,12 @@ const Portfolio = () => {
                                         {item.title}
                                     </CardTitle>
                                     <CardDescription className="whitespace-pre-line">
-                                        <div className="mb-1">
+                                        <span className="mb-1">
                                             {item.subtitle}
-                                        </div>
-                                        <div className="break-all text-sm">
+                                        </span>
+                                        <span className="break-all text-sm">
                                             {item.languages.join(' / ')}
-                                        </div>
+                                        </span>
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent>
