@@ -37,7 +37,7 @@ const Portfolio = () => {
                         sm:grid sm:grid-cols-2 md:grid-cols-3
                     ">
                         {portfolio.map((item, index) => (
-                            <Card className="w-11/12 mx-auto mb-10" key={index}>
+                            <Card className="w-full md:w-11/12 mx-auto mb-10" key={index}>
                                 <CardHeader>
                                     <CardTitle className="text-xl">
                                         {item.title}
