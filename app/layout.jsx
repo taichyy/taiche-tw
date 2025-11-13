@@ -2,6 +2,7 @@ import { Analytics } from "@vercel/analytics/react"
 
 import "./globals.css"
 import "../public/icomoon/style.css";
+import ProviderAOS from "@/components/providers/provider-aos"
 
 export const metadata = {
     title: "Tai's taiche.tw | HOME",
@@ -13,7 +14,9 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body className="font-sans min-h-screen bg-[#F3F3F3]">
                 <Analytics />
-                {children}
+                <ProviderAOS>
+                    {children}
+                </ProviderAOS>
             </body>
         </html>
     )
