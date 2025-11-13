@@ -8,27 +8,28 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
 import { portfolio } from "@/lib/data";
 import { Separator } from "@/components/ui/separator";
 
 const Portfolio = () => {
     const heading = "個人作品集";
-    const description = "包含實務、接案、個人專案等，展示我的前端開發技能和設計能力。這些作品涵蓋了多種技術和框架，包括但不限於 JavaScript、TypeScript、php 及各式 No-SQL、SQL 資料庫。展示了我在網頁程式設計和開發方面的專業知識。";
+    const description =
+        "這些作品涵蓋了多種技術和框架，包括但不限於 JavaScript、TypeScript、php 及各式 No-SQL、SQL 資料庫。展示了我在網頁程式設計和開發方面的專業知識。";
 
     return (
         <div>
             <section className="py-32">
                 <div className="container mx-auto flex flex-col items-center">
                     <div className="text-center">
-                        <h2 
+                        <h2
                             data-aos="fade-in"
                             data-aos-duration="1000"
                             className="mb-3 text-3xl font-semibold text-pretty md:mb-4 md:text-4xl lg:mb-6 lg:max-w-3xl lg:text-5xl"
                         >
                             {heading}
                         </h2>
-                        <p 
+                        <p
                             data-aos="fade-in"
                             data-aos-duration="1000"
                             className="mb-8 text-muted-foreground md:text-base lg:max-w-2xl lg:text-lg"
@@ -36,30 +37,28 @@ const Portfolio = () => {
                             {description}
                         </p>
                     </div>
-                    <main className="
+                    <main
+                        className="
                         flex flex-col md:mx-14 mb-2 gap-2 w-full
                         sm:grid sm:grid-cols-2 md:grid-cols-3
-                    ">
+                    "
+                    >
                         {portfolio.map((item, index) => (
-                            <Card 
+                            <Card
                                 key={index}
                                 data-aos="fade-up"
                                 data-aos-duration="1000"
                                 data-aos-delay={index * 200}
-                                className="w-full md:w-11/12 mx-auto flex flex-col" 
+                                className="w-full md:w-11/12 mx-auto flex flex-col"
                             >
                                 <CardHeader>
-                                    <CardTitle className="text-xl mb-1">
-                                        {item.title}
-                                    </CardTitle>
+                                    <CardTitle className="text-xl mb-1">{item.title}</CardTitle>
                                     <div className="break-all text-sm">
-                                        {item.languages.join(' / ')}
+                                        {item.languages.join(" / ")}
                                     </div>
                                     <Separator />
                                     <CardDescription className="whitespace-pre-line">
-                                        <span className="mb-1 block">
-                                            {item.subtitle}
-                                        </span>
+                                        <span className="mb-1 block">{item.subtitle}</span>
                                     </CardDescription>
                                 </CardHeader>
                                 <CardContent>
@@ -87,6 +86,6 @@ const Portfolio = () => {
             </section>
         </div>
     );
-}
+};
 
 export default Portfolio;
