@@ -10,10 +10,9 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 import { portfolio } from "@/lib/data";
-import { Badge } from "@/components/ui/badge";
+import { Separator } from "@/components/ui/separator";
 
 const Portfolio = () => {
-    const tagline = "Tai's Portfolio";
     const heading = "個人作品集";
     const description = "包含實務、接案、個人專案等，展示我的前端開發技能和設計能力。這些作品涵蓋了多種技術和框架，包括但不限於 JavaScript、TypeScript、php 及各式 No-SQL、SQL 資料庫。展示了我在網頁程式設計和開發方面的專業知識。";
 
@@ -22,13 +21,18 @@ const Portfolio = () => {
             <section className="py-32">
                 <div className="container mx-auto flex flex-col items-center">
                     <div className="text-center">
-                        <Badge variant="secondary" className="mb-6">
-                            {tagline}
-                        </Badge>
-                        <h2 className="mb-3 text-3xl font-semibold text-pretty md:mb-4 md:text-4xl lg:mb-6 lg:max-w-3xl lg:text-5xl">
+                        <h2 
+                            data-aos="fade-in"
+                            data-aos-duration="1000"
+                            className="mb-3 text-3xl font-semibold text-pretty md:mb-4 md:text-4xl lg:mb-6 lg:max-w-3xl lg:text-5xl"
+                        >
                             {heading}
                         </h2>
-                        <p className="mb-8 text-muted-foreground md:text-base lg:max-w-2xl lg:text-lg">
+                        <p 
+                            data-aos="fade-in"
+                            data-aos-duration="1000"
+                            className="mb-8 text-muted-foreground md:text-base lg:max-w-2xl lg:text-lg"
+                        >
                             {description}
                         </p>
                     </div>
@@ -37,17 +41,24 @@ const Portfolio = () => {
                         sm:grid sm:grid-cols-2 md:grid-cols-3
                     ">
                         {portfolio.map((item, index) => (
-                            <Card className="w-full md:w-11/12 mx-auto mb-10" key={index}>
+                            <Card 
+                                key={index}
+                                data-aos="fade-up"
+                                data-aos-duration="1000"
+                                data-aos-delay={index * 200}
+                                className="w-full md:w-11/12 mx-auto flex flex-col" 
+                            >
                                 <CardHeader>
-                                    <CardTitle className="text-xl">
+                                    <CardTitle className="text-xl mb-1">
                                         {item.title}
                                     </CardTitle>
+                                    <div className="break-all text-sm">
+                                        {item.languages.join(' / ')}
+                                    </div>
+                                    <Separator />
                                     <CardDescription className="whitespace-pre-line">
-                                        <span className="mb-1">
+                                        <span className="mb-1 block">
                                             {item.subtitle}
-                                        </span>
-                                        <span className="break-all text-sm">
-                                            {item.languages.join(' / ')}
                                         </span>
                                     </CardDescription>
                                 </CardHeader>
@@ -62,9 +73,9 @@ const Portfolio = () => {
                                         />
                                     </div>
                                 </CardContent>
-                                <CardFooter className="flex justify-between">
+                                <CardFooter className="flex items-end flex-grow mt-6">
                                     <Link href={`/portfolio/${item.id}`}>
-                                        <div className="cursor-pointer border-2 border-[#e31b6d] mt-10 py-1 px-5 hover:bg-[#e31b6d] duration-200 hover:text-white">
+                                        <div className="cursor-pointer border-2 border-[#e31b6d] py-1 px-5 hover:bg-[#e31b6d] duration-200 hover:text-white">
                                             了解更多
                                         </div>
                                     </Link>

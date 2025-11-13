@@ -6,7 +6,10 @@ const Contact = () => {
     }
     
     return (
-        <div className="h-screen flex flex-col-reverse md:flex-row items-center justify-center md:ml-5">
+        <div 
+            data-aos="fade-in" 
+            className="h-screen flex flex-col-reverse md:flex-row items-center justify-center md:ml-5" 
+        >
             <div className="text-center">
                 <h3 className="text-2xl font-bold uppercase">
                     contact me

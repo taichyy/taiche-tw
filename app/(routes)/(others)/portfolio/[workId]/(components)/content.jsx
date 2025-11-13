@@ -98,12 +98,17 @@ const Content = ({
                             <Button
                                 type="button"
                                 variant="outline"
+                                data-aos="fade-in"
                             >
                                 <ArrowLeft className="mr-2" size={14} />
                                 返回
                             </Button>
                         </Link>
-                        <a href={linkAvailable ? work.link : ""} target="_blank">
+                        <a 
+                            href={linkAvailable ? work.link : ""} 
+                            target={linkAvailable ? "_blank" : "_self"}
+                            data-aos="fade-in"
+                        >
                             <Button
                                 type="button"
                                 variant={linkAvailable ? "default" : "secondary"}
@@ -117,28 +122,28 @@ const Content = ({
                     </div>
 
                     {work?.badges && !!work.badges.length && work.badges.map((badge, index) => (
-                        <Badge variant="outline" key={index}>
+                        <Badge variant="outline" key={index} data-aos="fade-in" >
                             {badge}
                         </Badge>
                     ))}
 
                     {work?.title && (
-                        <h1 className="mt-3 text-3xl font-extrabold">
+                        <h1 className="mt-3 text-3xl font-extrabold" data-aos="fade-in">
                             {work.title}
                         </h1>
                     )}
 
                     {work?.subtitle && (
-                        <h2 className="mt-2 text-lg text-muted-foreground whitespace-pre-line">
+                        <h2 className="mt-2 text-lg text-muted-foreground whitespace-pre-line" data-aos="fade-in">
                             {work.subtitle}
                         </h2>
                     )}
                     {work?.languages && (
-                        <p className="mt-2 text-sm text-muted-foreground">
+                        <p className="mt-2 text-sm text-muted-foreground" data-aos="fade-in">
                             {work.languages.join(" / ")}
                         </p>
                     )}
-                    <div className="md:mx-3 my-16">
+                    <div className="md:mx-3 my-16" data-aos="fade-up">
                         <Image
                             src={work.img[num]}
                             alt={`${work.img[num].split('/')[work.img[num].split('/').length - 1]} Image`}
@@ -160,6 +165,7 @@ const Content = ({
                         key={sectionIndex}
                         id={`section${sectionIndex + 1}`}
                         ref={(ref) => addSectionRef(`section${sectionIndex + 1}`, ref)}
+                        data-aos="fade-up"
                         className="prose mb-8"
                     >
                         {/* 區塊標題 */}
