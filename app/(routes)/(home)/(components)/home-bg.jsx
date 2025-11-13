@@ -54,12 +54,7 @@ const HomeBg = () => {
                             onMouseEnter={() => handleHover(i)} 
                             onMouseLeave={() => handleHover(0)}
                         >
-                            <Link 
-                                href={items[i].link} 
-                                data-aos="fade-left"
-                                data-aos-duration="1000"
-                                data-aos-delay={i * 400}
-                            >
+                            <Link href={items[i].link}>
                                 {items[i].title}
                             </Link>
                         </span>
@@ -69,5 +64,6 @@ const HomeBg = () => {
         </main>
     );
 }
+
 
 export default HomeBg;
