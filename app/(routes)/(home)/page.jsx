@@ -9,7 +9,7 @@ export default function HomePage() {
     }
 
     return (
-        <div className="h-screen bg-[#f3f3f3] flex flex-row text-slate-800">
+        <div className="h-dvh bg-[#f3f3f3] flex flex-row text-slate-800">
             <aside className='bg-white flex flex-col gap-10 px-[1.5rem] pt-[2rem]'>
                 <HomeBtn />
                 <Hamburger />
@@ -41,3 +41,4 @@ export default function HomePage() {
         </div>
     )
 }
+
