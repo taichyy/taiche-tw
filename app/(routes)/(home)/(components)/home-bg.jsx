@@ -49,8 +49,17 @@ const HomeBg = () => {
             <nav className='mr-5 mb-10 text-2xl font-semibold z-10 md:mr-20 md:mb-20 md:text-4xl text-right duration-200' >
                 <div className='flex flex-col gap-8'>
                     {Array.from({ length: Object.keys(items).length }).map((_, i) => (
-                        <span key={i} onMouseEnter={() => handleHover(i)} onMouseLeave={() => handleHover(0)}>
-                            <Link href={items[i].link}>
+                        <span 
+                            key={i} 
+                            onMouseEnter={() => handleHover(i)} 
+                            onMouseLeave={() => handleHover(0)}
+                        >
+                            <Link 
+                                href={items[i].link} 
+                                data-aos="fade-left"
+                                data-aos-duration="1000"
+                                data-aos-delay={i * 400}
+                            >
                                 {items[i].title}
                             </Link>
                         </span>
