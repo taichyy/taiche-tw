@@ -1,9 +1,8 @@
 import { portfolio } from "@/lib/data";
 import { Content } from "./(components)/content";
 
-const WorkIdInPortfolioPage = ({
-    params: { workId },
-}) => {
+const WorkIdInPortfolioPage = async ({ params }) => {
+    const { workId } = await params;
     const work = portfolio.find(item => item.id == workId);
 
     return (
