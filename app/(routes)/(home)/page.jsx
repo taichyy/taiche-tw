@@ -4,7 +4,7 @@ import Hamburger from "@/components/hamburger/hamburger";
 
 export default function HomePage() {
     const data = {
-        home_intro: "我是嚴太成，一名專注於 Next.js、擅長前端架構設計的全端工程師。\n\n具備完整系統開發與商業化經驗，曾獨立打造並成功上線 ERP 產品。",
+        home_intro: "我是 Tai，一名專注於 Next.js、擅長前端架構設計的全端工程師。\n\n具備完整系統開發與商業化經驗，曾獨立打造並成功上線 ERP 產品。",
         home_mail: "chinzeilulu@gmail.com"
     }
 
